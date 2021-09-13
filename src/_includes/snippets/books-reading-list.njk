@@ -1,0 +1,5 @@
+{% for book in collections.booksReading %}
+  {% if loop.first %}<ul>{% endif %}
+  <li><em>{{ book.title | removeSubtitle if noSubtitle else book.title }}</em> by {{ book.author | formatAuthor }}</li>
+  {% if loop.last %}</ul>{% endif %}
+{% endfor %}
