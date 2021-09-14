@@ -10,6 +10,9 @@
   "author": "",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
-    "csv-parse": "^4.16.3"
+    "@11ty/eleventy-cache-assets": "^2.3.0",
+    "csv-parse": "^4.16.3",
+    "dotenv": "^10.0.0",
+    "node-fetch": "2.6.1"
   }
 }

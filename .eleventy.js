@@ -1,3 +1,4 @@
+const dotenv = require("dotenv").config();
 const fs = require("fs");
 const path = require("path");
 const nunjucks = require("nunjucks");
@@ -80,9 +81,9 @@ module.exports = function (eleventyConfig) {
    * 
    * https://maxkoehler.com/posts/eleventy-csv/
    */
-  const parse = require("csv-parse/lib/sync");
+  const csvParse = require("csv-parse/lib/sync");
   eleventyConfig.addDataExtension("csv", (contents) => {
-    const records = parse(contents, {
+    const records = csvParse(contents, {
       columns: true,
       skip_empty_lines: true,
     });
